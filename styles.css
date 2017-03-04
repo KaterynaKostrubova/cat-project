@@ -41,6 +41,11 @@
   box-shadow: 5px 5px 5px #2F4F4F;
   background: #008B8B;
 }
+.buttonhover {
+  background: #F4A460;
+  transform: rotate(360deg);
+  transition: 0.3s ease;
+}
 body {
   margin: 0;
   padding: 0;
@@ -63,7 +68,7 @@ body .wrapper .header {
   height: 100px;
   width: 960px;
   border-radius: 10px;
-  background: ForestGreen;
+  background: #008080;
   position: fixed;
   box-sizing: border-box;
   z-index: 10;
@@ -82,7 +87,7 @@ body .wrapper .header-nav-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  background: ForestGreen;
+  background: #008080;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -112,7 +117,7 @@ body .wrapper .header-nav-list-item-submenu {
   position: absolute;
   margin: 0;
   padding: 0;
-  background: ForestGreen;
+  background: #008080;
   list-style: none;
   visibility: hidden;
   transition: 0.5s ease;
@@ -200,10 +205,15 @@ body .wrapper .main-catalog-item-form-button input[type="button"] {
 body .wrapper .main-catalog-item-form-button input[type="button"]:active {
   background: #8FBC8F;
 }
+body .wrapper .main-catalog-item-form-button input[type="button"]:hover {
+  background: #F4A460;
+  transform: rotate(360deg);
+  transition: 0.3s ease;
+}
 body .wrapper .footer {
   margin: 0;
   padding: 40px;
   position: relative;
   top: 60px;
-  background: ForestGreen;
+  background: #008080;
 }
