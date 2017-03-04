@@ -1,0 +1,209 @@
+.stylenone {
+  list-style: none;
+}
+.decornone {
+  text-decoration: none;
+}
+.subhidden {
+  visibility: hidden;
+  transition: 0.5s ease;
+  transform: translateY(10%);
+  opacity: 0;
+}
+.linkmenu {
+  color: #FFF;
+  display: block;
+  text-decoration: none;
+}
+.dropsub {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+.transformmenu {
+  background: #add8e6;
+  transition: 0.5s ease;
+  transform: scale(1.1, 1.1);
+}
+.hoversidebar {
+  color: #ffe;
+  box-shadow: 0px 0px 5px 2px #0ea8f4;
+  background: #009494;
+}
+.transformimg {
+  transform: rotate(5deg) scale(1.1, 1.1);
+}
+.stylebutton {
+  padding: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #2F4F4F;
+  background: #008B8B;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: url(http://photoshopia.ru/usergallery/data/104/misc_cat_background_photoshopia_ru_48.jpg);
+  background-attachment: fixed;
+  font-family: "Brush Script MT", cursive;
+}
+body .wrapper {
+  position: relative;
+  max-width: 960px;
+  background: rgba(173, 216, 230, 0.9);
+  margin: 0 auto;
+  padding: 0;
+}
+body .wrapper .header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 100px;
+  width: 960px;
+  border-radius: 10px;
+  background: ForestGreen;
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 10;
+}
+body .wrapper .header-logo #logo {
+  height: 90px;
+  width: 90px;
+}
+body .wrapper .header-name {
+  margin: 10px 10px 10px 30px;
+  padding: 0;
+  color: black;
+  font-size: 28px;
+}
+body .wrapper .header-nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  background: ForestGreen;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body .wrapper .header-nav-list-item {
+  height: 63px;
+  width: 100px;
+}
+body .wrapper .header-nav-list-item:hover .header-nav-list-item-submenu {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+body .wrapper .header-nav-list-item a {
+  color: #FFF;
+  display: block;
+  text-decoration: none;
+  margin: 20px 20px;
+  padding: 0;
+}
+body .wrapper .header-nav-list-item:hover {
+  background: #add8e6;
+  transition: 0.5s ease;
+  transform: scale(1.1, 1.1);
+}
+body .wrapper .header-nav-list-item-submenu {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background: ForestGreen;
+  list-style: none;
+  visibility: hidden;
+  transition: 0.5s ease;
+  transform: translateY(10%);
+  opacity: 0;
+}
+body .wrapper .header-nav-list-item-submenu-subitem {
+  height: auto;
+  width: 100px;
+}
+body .wrapper .header-nav-list-item-submenu-subitem a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 16px;
+  display: block;
+  margin: 15px 20px;
+  padding: 0;
+}
+body .wrapper .header-nav-list-item-submenu-subitem:hover {
+  background: #add8e6;
+  transition: 0.5s ease;
+  transform: scale(1.1, 1.1);
+}
+body .wrapper .main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: relative;
+  top: 150px;
+}
+body .wrapper .main-sheet {
+  position: fixed;
+  top: 150px;
+  text-align: left;
+}
+body .wrapper .main-sheet-list {
+  height: auto;
+  width: 200px;
+  list-style: none;
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+body .wrapper .main-sheet-list-item a {
+  display: block;
+  margin: 0 0 5px 0;
+  padding: 5px;
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  background: #B0E0E6;
+}
+body .wrapper .main-sheet-list-item a:hover {
+  color: #ffe;
+  box-shadow: 0px 0px 5px 2px #0ea8f4;
+  background: #009494;
+}
+body .wrapper .main-sheet-list-item a:active {
+  color: #8FBC8F;
+  font-size: 16px;
+}
+body .wrapper .main-catalog {
+  position: relative;
+  left: 30%;
+}
+body .wrapper .main-catalog-item {
+  height: auto;
+  width: 500px;
+}
+body .wrapper .main-catalog-item-img {
+  border-radius: 20px;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+body .wrapper .main-catalog-item-img-img:hover {
+  transform: rotate(5deg) scale(1.1, 1.1);
+}
+body .wrapper .main-catalog-item-form-button input[type="button"] {
+  padding: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #2F4F4F;
+  background: #008B8B;
+}
+body .wrapper .main-catalog-item-form-button input[type="button"]:active {
+  background: #8FBC8F;
+}
+body .wrapper .footer {
+  margin: 0;
+  padding: 40px;
+  position: relative;
+  top: 60px;
+  background: ForestGreen;
+}

@@ -1,0 +1,221 @@
+
+@bcwrapper:rgba(173, 216, 230, 0.9); 
+@bcheader:ForestGreen;
+        //#008080;
+@bcsidebar: #B0E0E6;
+@fontfamily: "Brush Script MT", cursive;
+@wdwrap: 960px;
+@buttonactive: #8FBC8F;
+
+.indent (@mg, @pg) {
+  margin: @mg;
+  padding: @pg;
+}
+
+.flex (@disp, @flow, @jstfy){
+  display: @disp;
+  flex-flow: @flow; 
+  justify-content: @jstfy;
+}
+.size (@hg, @wd) {
+  height: @hg;
+  width: @wd;
+}
+
+.styletext (@clrtxt @size) {
+  color: @clrtxt; 
+  font-size: @size;
+}
+.rounded (@round) {
+  border-radius: @round;
+}
+.stylenone {
+  list-style:none;
+}
+.decornone {
+  text-decoration: none;
+}
+
+.subhidden {
+  visibility: hidden;
+  transition: 0.5s ease;
+  transform: translateY(10%);
+  opacity:0;
+}
+  .linkmenu {
+  color: #FFF;
+  display: block;
+  text-decoration: none;
+}
+
+.dropsub {
+  visibility:visible;
+  transform: translateY(0);
+  opacity:1;
+}
+.transformmenu {
+   background: rgb(173, 216, 230);
+   transition: 0.5s ease;
+   transform: scale(1.1,1.1);
+}
+// ---------------------------------------------------
+
+.hoversidebar {
+  color: #ffe;     
+  box-shadow: 0px 0px 5px 2px #0ea8f4;
+  background: #009494; 
+}
+.transformimg {
+  transform: rotate(5deg) scale(1.1,1.1);
+}
+
+.stylebutton {
+  padding:10px;
+  width:100px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #2F4F4F;
+  background: #008B8B;
+}
+// ---------------------------------------------------
+body {
+  .indent (0, 0);
+  text-align: center;
+  background: url(http://photoshopia.ru/usergallery/data/104/misc_cat_background_photoshopia_ru_48.jpg);
+  background-attachment: fixed;
+  font-family: @fontfamily;
+   .wrapper { 
+    position:relative;
+    max-width: @wdwrap;
+    background: @bcwrapper;
+    .indent (0 auto, 0);
+      .header {
+          .flex (flex, row wrap, space-between);
+          
+          .size ( 100px, 960px);
+          .rounded (10px);
+          background:  @bcheader;
+          position:fixed;
+          box-sizing: border-box;  
+          z-index: 10;
+            &-logo #logo {
+              .size(90px,90px)
+            }
+            &-name {
+              .indent (10px 10px 10px 30px, 0);
+              .styletext (black, 28px);
+            }
+            &-nav {
+                &-list{
+                .flex (flex, row wrap, flex-end);
+                background: @bcheader;
+                .indent (0,0);
+                .stylenone;
+                  &-item {
+                    .size(63px,100px);
+                    &:hover .header-nav-list-item-submenu {
+                        .dropsub;
+                        }
+                    a {
+                      .linkmenu;
+                      .indent(20px 20px, 0);
+                    }
+                    &:hover {
+                     .transformmenu;
+                   }
+
+                    &-submenu {
+                      position:absolute;
+                      .indent (0,0);
+                      background: @bcheader;
+                      .stylenone;
+                      .subhidden;
+                        
+                        &-subitem {
+                          .size(auto,100px);
+                           a {
+                            .decornone;
+                            .styletext (#FFF, 16px);
+                             display: block;
+                            .indent(15px 20px, 0);
+                      }
+                       &:hover {
+                       .transformmenu;
+                       }
+                    }
+                  }
+                }
+              }
+            }
+          }
+      .main {
+            .flex (flex, row wrap, space-between);
+            position:relative;
+            top:150px;
+            &-sheet {
+              position: fixed;
+              top:150px;
+              text-align: left; 
+              &-list {
+                .size (auto, 200px) ;     
+                .stylenone;   
+                .indent (0 0 0 30px, 0);    
+                &-item {
+                  a {
+                    display: block;     
+                    .indent (0 0 5px 0, 5px); 
+                    .decornone; 
+                    .styletext(#666, 16px);   
+                    background: @bcsidebar; 
+                  }
+                  a:hover {      
+                      .hoversidebar;    
+                    }
+                 a:active{        
+                      .styletext(@buttonactive, 16px);}
+                }
+              }
+            }
+            &-catalog {
+                position:relative;
+                left:30%;
+              &-item {
+                  .size (auto, 500px);
+
+                &-img {
+                  .rounded (20px);
+                  .indent (0, 10px 0 0 0);
+                   &-img:hover {
+                  .transformimg;
+                  }
+                }
+
+                &-name {
+                }
+
+                &-guote {
+                  
+                }
+
+                &-form {
+                  &-button input[type="button"] {
+                .stylebutton;
+                   }
+
+                  &-button input[type="button"]:active {
+                    background: @buttonactive;
+                  }
+                  }
+                }
+              }
+            }
+      .footer {
+          .indent (0, 40px);
+            position:relative;
+            top:60px;
+            background: @bcheader;
+      }
+ }
+}
+ 
+
